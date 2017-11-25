@@ -9,27 +9,21 @@
 
     <div class="row">
         <div class = "col-lg-6 text-center" id="burgerList">
-            <div class="card">
-                <div class="card-block">
-                    <div class="row">
-                        {{#each burger_data}}
-                        {{#unless this.devoured}}
-                        <div class="col-lg-8 text-center">
-                            {{this.id}}. {{this.burger_name}}
-                        </div>
-                        <div class="col">
-                        </div>
-                        <div class="col-lg-3 text-center">
-                            <form method="POST" action="/burgers/update?_method=PUT" class="button-size">
-                                <input type="hidden" name="burger_id" type="text" value={{this.id}}>
-                                <br>
-                                <button type="submit" class="btn btn-primary" id="submitButton">Eat Da Burger!</button>
-                            </form>
-                        </div>
-                        {{/unless}}
-                        {{/each}}
-                    </div>
+            <div class="row">
+                {{#each burger_data}}
+                {{#unless this.devoured}}
+                <div class="col-lg-9 text-center">
+                    {{this.id}}. {{this.burger_name}}
                 </div>
+                <div class="col-lg-3 text-center">
+                    <form method="POST" action="/burgers/update?_method=PUT" class="button-size">
+                        <input type="hidden" name="burger_id" type="text" value={{this.id}}>
+                        <br>
+                        <button type="submit" class="btn btn-primary" id="submitButton">Eat Da Burger!</button>
+                    </form>
+                </div>
+                {{/unless}}
+                {{/each}}
             </div>
         </div>
         <div class="col-lg-6 text-center">
