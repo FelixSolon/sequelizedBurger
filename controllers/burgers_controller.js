@@ -15,10 +15,13 @@ router.put('/burgers/update', function(req,res){
     console.log("Body:");
     console.log(req.body);
     db.Burger.update(
-        {   devoured: true,
+        {
+            devoured: true
+        },
+        {
             where: {
                 id: req.body.burger_id
-            }
+        }
         }).then(function(dbBurger) {
         res.redirect('/')
     });
