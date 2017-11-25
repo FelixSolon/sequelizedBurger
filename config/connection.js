@@ -10,7 +10,7 @@ if(process.env.JAWSDB_URL){
     host: "localhost",
     user: "root",
     password: MySQLPassword,
-    database: "beeProductive"
+    database: "burgers_db"
     });
 };
 
