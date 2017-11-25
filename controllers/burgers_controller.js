@@ -18,7 +18,7 @@ router.put('/burgers/update', function(req,res){
             where: {
                 id: req.body.id
             }
-        }.then(function(dbBurger) {
+        }).then(function(dbBurger) {
         res.redirect('/')
     });
 });
