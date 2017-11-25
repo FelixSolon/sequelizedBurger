@@ -25,7 +25,7 @@ router.put('/burgers/update', function(req,res){
 
 router.post("/burgers/create", function(req,res){
     db.Burger.create(req.body).then(function(dbBurger){
-        res.json(dbBurger)
+        res.redirect('/')
     });
 });
 
