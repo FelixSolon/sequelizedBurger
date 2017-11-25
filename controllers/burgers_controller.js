@@ -4,14 +4,16 @@ var router = express.Router();
 
 router.get('/', function(req,res){
     db.Burger.findAll({}).then(function(burger_data){
-        console.log(burger_data);
         res.render('index',{burger_data});
     })
 });
 
 router.put('/burgers/update', function(req,res){
     var id = req.body.burger_id;
+    console.log("ID:");
     console.log(req.body.burger_id);
+    console.log("Body:");
+    console.log(req.body);
     db.Burger.update(
         req.body,
         {
