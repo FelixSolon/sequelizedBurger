@@ -3,7 +3,7 @@ var db = require("../models");
 var router = express.Router();
 
 router.get('/', function(req,res){
-    db.Burger.findAll({}).then(, function(burger_data){
+    db.Burger.findAll({}).then(function(burger_data){
         console.log(burger_data);
         res.render('index',{burger_data});
     })
